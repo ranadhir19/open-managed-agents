@@ -1,0 +1,81 @@
+{
+  "run_id": "run-001",
+  "task_id": "publish-brief",
+  "plan_hash": "dc90bbb6fb4b6fc9",
+  "origin": "dynamic",
+  "status": "completed",
+  "traces": [
+    {
+      "step_id": "research_0",
+      "agent": "scout",
+      "provider": "stub-pro",
+      "skill": "research",
+      "status": "ok",
+      "attempts": 1,
+      "tokens_in": 6,
+      "tokens_out": 34,
+      "cost_usd": 0.000528,
+      "latency_s": 0.224,
+      "detail": ""
+    },
+    {
+      "step_id": "research_1",
+      "agent": "scout",
+      "provider": "stub-pro",
+      "skill": "research",
+      "status": "ok",
+      "attempts": 1,
+      "tokens_in": 7,
+      "tokens_out": 69,
+      "cost_usd": 0.001056,
+      "latency_s": 0.224,
+      "detail": ""
+    },
+    {
+      "step_id": "synthesize",
+      "agent": "writer",
+      "provider": "stub-pro",
+      "skill": "synthesize",
+      "status": "ok",
+      "attempts": 1,
+      "tokens_in": 121,
+      "tokens_out": 104,
+      "cost_usd": 0.001923,
+      "latency_s": 0.184,
+      "detail": ""
+    },
+    {
+      "step_id": "write",
+      "agent": "writer",
+      "provider": "stub-pro",
+      "skill": "write",
+      "status": "ok",
+      "attempts": 1,
+      "tokens_in": 120,
+      "tokens_out": 119,
+      "cost_usd": 0.002145,
+      "latency_s": 0.106,
+      "detail": ""
+    },
+    {
+      "step_id": "publish",
+      "agent": "writer",
+      "provider": "stub-pro",
+      "skill": "publish",
+      "status": "ok",
+      "attempts": 1,
+      "tokens_in": 125,
+      "tokens_out": 21,
+      "cost_usd": 0.00069,
+      "latency_s": 0.053,
+      "detail": "approved by human approver"
+    }
+  ],
+  "replans": [],
+  "total_tokens": 726,
+  "total_cost_usd": 0.006342,
+  "wall_time_s": 0.605,
+  "final_output": "# Write and publish the Q3 operations brief.\n\n## synthesize\n[infra-postmortem] The payments outage on 9 January was caused by a misconfigured cache TTL that pinned stale exchange rates for six hours. [q3-memo] In Q3 the returns rate fell to 3.1 percent while churn held at 1.8 percent; support tickets rose 12 percent after the billing migration. [vendor-contract] The Northwind vendor contract grants a discount of 17.5 percent on all platform fees, renewing in November 2027.\n",
+  "success": null,
+  "steps_executed": 5
+}
