@@ -25,6 +25,15 @@ Exit 0 and a final line of `HARNESS GREEN` mean every stage passed.
    `experiments/run_experiments.py`, `results/results.md`,
    `results/demo_run.json`, both results charts). Existence only —
    file contents are not compared.
+   Stage 4 also includes **deployment-config validation**: the tree is
+   scanned for `render.yaml`/`render.yml`, `vercel.json`, `Procfile`,
+   `Dockerfile*`, `docker-compose*.yml`/`yaml`, `netlify.toml`,
+   `fly.toml`, and `.github/workflows/*.yml`/`yaml`. Any file found is
+   parsed and schema-checked (e.g. a Render service with `type: static`
+   fails — a static site is `type: web` with `env: static`); a broken
+   deploy config fails the stage. Current result: **no deployment
+   configs present as of this run** — the step passes with nothing to
+   validate.
 
 ## What is NOT verified (honest non-coverage)
 
